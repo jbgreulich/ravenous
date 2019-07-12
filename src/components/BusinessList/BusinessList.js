@@ -4,13 +4,15 @@ import Business from '../Business/Business';
 
 class BusinessList extends React.Component {
   render() {
+    const { businessListProp } = this.props;
+
     return (
       <div className="BusinessList">
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
+        {
+          businessListProp.map(business => {
+          return <Business businessProp={business}/>
+          })
+        }
       </div>
     )
   }
