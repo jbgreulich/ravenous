@@ -16,15 +16,19 @@ const business = {
   reviewCount: 90
 }
 
-let businesses = [
+const businesses = [
   business, business, business, business, business, business
 ]
 
 class App extends React.Component {
+  searchYelp(term, location, sortBy){
+    console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar searchYelp={this.searchYelp}/>
         <BusinessList businessListProp={businesses} />
       </div>
     );
