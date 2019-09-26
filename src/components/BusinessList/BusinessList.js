@@ -1,8 +1,10 @@
-import React from 'react';
-import './BusinessList.css';
+import React, { Component } from 'react';
+
 import Business from '../Business/Business';
 
-class BusinessList extends React.Component {
+import './BusinessList.css';
+
+export default class BusinessList extends Component {
   render() {
     const { businessListProp } = this.props;
 
@@ -10,12 +12,10 @@ class BusinessList extends React.Component {
       <div className="BusinessList">
         {
           businessListProp.map(business => {
-          return <Business businessProp={business}/>
+            return <Business key={business.id} businessProp={business}/>
           })
         }
       </div>
     )
   }
 }
-
-export default BusinessList;
