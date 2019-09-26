@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Yelp from './util/Yelp';
+import Yelp from '../../util/Yelp';
 
-import BusinessList from './components/BusinessList/BusinessList';
-import SearchBar from './components/SearchBar/SearchBar';
+import BusinessList from '../BusinessList/BusinessList';
+import SearchBar from '../SearchBar/SearchBar';
 
 import './App.css';
 
